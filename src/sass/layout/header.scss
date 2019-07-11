@@ -1,0 +1,54 @@
+.wrapper-header {
+  background-color: #181c27;
+  background-image: url(../images/LayerWallpaperHeaderTablet.png);
+}
+
+.page-header {
+  margin: 0 auto;
+  padding: 36px 30px 26px 30px;
+
+  &_descr {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-bottom: 26px;
+    color: $text-light;
+  }
+
+  &_headline {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 800;
+    color: $text-accented;
+    margin-bottom: 24px;
+    letter-spacing: -0.07em;
+  }
+
+  &_descr2 {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-bottom: 26px;
+    color: $text-light;
+  }
+
+  &_meeting {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f9ae23;
+  }
+
+  &_date {
+    font-size: 20px;
+    font-weight: 800;
+    color: #f9ae23;
+    margin-bottom: 16px;
+  }
+
+  &_privacy {
+    font-size: 13px;
+    line-height: 37px;
+    text-align: center;
+    color: #5d6066;
+  }
+}

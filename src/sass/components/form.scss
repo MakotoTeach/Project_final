@@ -1,0 +1,47 @@
+.form {
+	&-container {
+		padding: 20px 20px 26px 20px;
+		background-color: $main-bg;
+		box-shadow: 0px 12px 70px 0px rgba(121, 139, 188, 0.48);
+  }
+	&-headline {
+		margin-bottom: 12px;
+		font-size: 16px;
+		font-weight: 800;
+		color: $text-form;
+	}
+	
+	&-descr {
+		margin-bottom: 14px;
+		font-size: 13px;
+		font-weight: 600;
+		color: $text-form;
+	}
+	&_input {
+		width: 100%;
+		height: 40px;
+		display: block;
+		margin-bottom: 12px;
+		padding-left: 12px;
+		padding-right: 12px;
+		color: $text-form;
+		// border: 1px solid #757575;
+		border: 1px solid #525252;
+		&::placeholder {
+			color: #a2a2a2;
+		}
+	}
+	&_submit {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		height: 40px;
+		font-size: 16px;
+		font-weight: 800;
+		text-transform: uppercase;
+		background-color: $button-bg;
+		box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
+		border: none;
+		color: $text-light;
+	}
+}

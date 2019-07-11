@@ -1,131 +1,19 @@
-/*
-   Import partials below
-*/
-@import './normalize';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap');
 
-* {
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-   font-family: "Open Sans", sans-serif;
- }
- /* page-header */
- .wrapper-header {
-   background-color: #181c27;
-   background-image: url(../images/LayerWallpaperHeaderTablet.png);
- }
- 
- .page-header {
-   margin: 0 auto;
-   padding: 36px 30px 26px 30px;
- }
- img {
-   display: block;
-   max-width: 100%;
-   height: auto;
- }
- .site-logo {
-   display: inline-block;
-   margin-bottom: 26px;
- }
- 
- .page-header_descr {
-   font-size: 14px;
-   line-height: 18px;
-   font-weight: 400;
-   margin-bottom: 26px;
-   color: #ffffff;
- }
- 
- .page-header_headline {
-   font-size: 20px;
-   line-height: 26px;
-   font-weight: 800;
-   color: #00eaff;
-   margin-bottom: 24px;
-   letter-spacing: -0.07em;
- }
- 
- .page-header_descr2 {
-   font-size: 14px;
-   line-height: 18px;
-   font-weight: 400;
-   margin-bottom: 26px;
-   color: #ffffff;
- }
- .page-header_meeting {
-   font-size: 14px;
-   font-weight: 600;
-   color: #f9ae23;
- }
- 
- .page-header_date {
-   font-size: 20px;
-   font-weight: 800;
-   color: #f9ae23;
-   margin-bottom: 16px;
- }
- 
- .form-headline {
-   font-size: 16px;
-   color: #000000;
-   font-weight: 800;
-   margin-bottom: 12px;
- }
- 
- .form-descr {
-   font-size: 13px;
-   color: #000000;
-   font-weight: 600;
-   margin-bottom: 14px;
- }
- 
- .page-header_form {
-   background-color: #ffffff;
-   box-shadow: 0px 12px 70px 0px rgba(121, 139, 188, 0.48);
-   padding: 20px 20px 26px 20px;
- }
- 
- .form-list {
-   list-style: none;
-   margin-bottom: 19px;
- }
- .form-list_item:nth-child(-n + 2) {
-   margin-bottom: 12px;
- }
- 
- input[type="email"],
- input[type="text"] {
-   width: 100%;
-   height: 40px;
-   display: block;
-   margin: auto;
-   padding-left: 12px;
-   padding-right: 12px;
-   border: 1px solid #757575;
- }
- 
- .form-button {
-   display: block;
-   margin: 0 auto;
-   width: 100%;
-   height: 40px;
-   font-size: 16px;
-   font-weight: 800;
-   text-transform: uppercase;
-   background-color: #ff6b08;
-   box-shadow: 0px 2px 10px 0px rgba(255, 107, 8, 0.59);
-   border: none;
-   color: #ffffff;
- }
- 
- .page-header_privacy {
-   color: #5d6066;
-   font-size: 13px;
-   line-height: 37px;
-   text-align: center;
- }
- 
+@import 'helpers/variables';
+// @import 'helpers/mixins';
+@import 'normalize';
+@import 'base';
+
+// Components
+@import 'components/logo';
+@import 'components/form';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+
  .basic-qustions_headline {
    font-size: 20px;
    font-weight: 800;
@@ -579,30 +467,6 @@
    margin-bottom: 15px;
  }
  
- .page-footer {
-   background-image: url(../images/phototeam.png);
-   text-align: center;
-   /* display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   align-items: center;
-   align-content: space-around; */
- }
- .make-request {
-   display: block;
-   font-size: 20px;
-   line-height: 60px;
-   color: #00eaff;
-   font-weight: 800;
-   margin-bottom: 300px;
- }
- 
- .page-footer_label {
-   font-size: 14px;
-   line-height: 14px;
-   font-weight: 400;
-   color: #ffffff;
- }
  /* .section5-awards::after {
    display: block;
    content: "";
