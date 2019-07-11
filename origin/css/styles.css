@@ -41,7 +41,7 @@ img {
   letter-spacing: -0.07em;
 }
 
-.page-header_descr2{
+.page-header_descr2 {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -121,6 +121,13 @@ input[type="text"] {
   text-align: center;
 }
 
+.basic-qustions_headline {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1b202a;
+  margin-bottom: 25px;
+  letter-spacing: -0.07em;
+}
 .basic-questions_list {
   list-style: none;
 }
@@ -157,6 +164,13 @@ input[type="text"] {
   margin: 0 auto;
   padding: 36px 47px 36px 47px;
 }
+.consult-headline {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1b202a;
+  margin-bottom: 25px;
+  letter-spacing: -0.07em;
+}
 
 .consult-list {
   list-style: none;
@@ -165,7 +179,6 @@ input[type="text"] {
 }
 
 .consult_item {
-  margin: auto;
   width: 100%;
   height: 229px;
   padding: 40px 40px 40px 30px;
@@ -227,18 +240,20 @@ input[type="text"] {
   margin: 0 auto;
   padding: 36px 30px 36px 30px;
 }
-.section-headline {
+.interest-headline {
   font-size: 20px;
   font-weight: 800;
   color: #1b202a;
   margin-bottom: 25px;
+  letter-spacing: -0.07em;
 }
 
-.section-label {
+.interest-label {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 22px;
   color: #1b202a;
+  letter-spacing: -0.03em;
 }
 
 .stat-list {
@@ -267,18 +282,22 @@ input[type="text"] {
   z-index: -1;
 }
 
-.number {
+.stat-number {
   font-size: 30px;
   font-weight: 700;
   color: #00eaff;
 }
 
-.number-descr {
+.stat-number_descr {
   font-size: 14px;
   font-weight: 400;
   color: #1b202a;
 }
 
+.stat-incoming_container {
+  padding-left: 18px;
+  padding-right: 18px;
+}
 .stat-incoming {
   font-size: 14px;
   font-weight: 700;
@@ -286,8 +305,6 @@ input[type="text"] {
 }
 
 .incoming-list {
-  padding-left: 18px;
-  padding-right: 18px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
@@ -310,7 +327,13 @@ input[type="text"] {
   line-height: 11px;
   font-weight: 400;
 }
-
+.offer-headline {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1b202a;
+  margin-bottom: 25px;
+  letter-spacing: -0.07em;
+}
 .offer-list {
   list-style: none;
   margin-bottom: 36px;
@@ -342,23 +365,23 @@ input[type="text"] {
 
 /* section4 */
 
-.section4-wrapper {
+.ITway-wrapper {
   background-color: #181c27;
   background-image: url(../img/LayerWallpaperHeaderTablet.png);
 }
 
-.section4 {
+.ITway {
   padding-top: 38px;
   padding-bottom: 40px;
 }
 
-.section4-label {
+.ITway-label {
   font-size: 16px;
   font-weight: 700;
   color: #ffffff;
 }
 
-.section4-label::after {
+.ITway-label::after {
   display: block;
   content: "";
   width: 60px;
@@ -367,30 +390,31 @@ input[type="text"] {
   margin-top: 26px;
   margin-bottom: 18px;
 }
-
-.section4-descr {
+.ITwork-container {
+  margin-bottom: 30px;
+}
+.ITway-descr {
   font-size: 14px;
   font-weight: 700;
   color: #ffffff;
 }
 
-.section4-info {
+.ITway-descr span {
   font-size: 14px;
   font-weight: 400;
   color: #dbdbdb;
-  margin-bottom: 32px;
 }
 
-.section4-headline {
+.ITway-headline {
   font-size: 20px;
   line-height: 26px;
-  font-weight: 800;
+  font-weight: 700;
   color: #00eaff;
   margin-bottom: 24px;
   letter-spacing: -0.07em;
 }
 
-.section4-button {
+.ITway-button {
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -409,6 +433,14 @@ input[type="text"] {
 
 /* section5 */
 
+.awards-headline {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1b202a;
+  margin-bottom: 25px;
+  letter-spacing: -0.07em;
+}
+
 .awards-label {
   display: inline-block;
   font-size: 16px;
@@ -419,10 +451,10 @@ input[type="text"] {
   margin-bottom: 50px;
 }
 
-.awards-wrapper {
+/* .awards-wrapper {
   padding-left: 18px;
   padding-right: 18px;
-}
+} */
 .awards-list {
   list-style: none;
   margin-bottom: 60px;
@@ -583,22 +615,152 @@ input[type="text"] {
     padding: 20px;
   }
 
+  .section {
+    margin: 0 auto;
+    padding: 36px 10px 36px 10px;
+  }
   .page-header_info {
     width: 576px;
   }
-.page-header_headline{
-  font-size: 40px;
-  line-height: 50px;
-}
-.page-header_descr2{
-  font-size: 18px;
-}
-.page-header_meeting{
-  font-size: 18px;
-}
-.page-header_date{
-  font-size: 40px;
+  .page-header_headline {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .page-header_descr2 {
+    font-size: 18px;
+  }
+  .page-header_meeting {
+    font-size: 18px;
+  }
+  .page-header_date {
+    font-size: 38px;
+  }
+  .page-header_form {
+    text-align: center;
+    padding: 30px 80px 40px 80px;
+  }
 
-}
-}
+  .basic-qustions_headline {
+    font-size: 30px;
+  }
 
+  .basic-questions_item {
+    font-size: 16px;
+  }
+  .consult-headline {
+    font-size: 30px;
+    width: 532px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .consult_item {
+    width: 225px;
+  }
+
+  .consult-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .interest-headline {
+    text-align: center;
+    font-size: 30px;
+    margin: auto;
+    margin-bottom: 85px;
+  }
+
+  .inside-container {
+    width: 532px;
+    margin: auto;
+  }
+
+  .consult-button {
+    height: 70px;
+    width: 532px;
+  }
+
+  .stat-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .stat-list_item {
+    width: 172px;
+  }
+  .stat-list_item:nth-child(6)::before {
+    background-image: url(../img/mapfortablet.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    left: -163px;
+    right: -10px;
+    top: 58px;
+    bottom: -170px;
+  }
+
+  .stat-number {
+    font-weight: 600;
+  }
+  .stat-incoming_container {
+    width: 256px;
+  }
+  .incoming-number {
+    font-weight: 600;
+  }
+  .interest-label {
+    width: 404px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  .offer-headline {
+    font-size: 30px;
+  }
+
+  .offer-list {
+    width: 440px;
+  }
+  .offer-list_item {
+    font-size: 16px;
+  }
+  .ITway-label {
+    font-size: 22px;
+    letter-spacing: -0.07em;
+  }
+
+  .ITwork-container {
+    width: 384px;
+  }
+
+  .ITway-headline {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .ITway-button {
+    width: 532px;
+    margin-left: 0;
+  }
+
+  .awards-headline {
+    width: 492px;
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 40px;
+  }
+
+  .awards-label{
+    margin-left: 40px;
+  }
+  .awards-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .awards-item {
+    width: 225px;
+    height: 465px;
+  }
+}
