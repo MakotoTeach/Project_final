@@ -3,10 +3,10 @@
 @import 'normalize';
 @import 'helpers/variables';
 @import 'helpers/mixins';
+@import 'helpers/placeholder';
 @import 'base';
 
 // Components
-@import 'components/container';
 @import 'components/logo';
 @import 'components/form';
 @import 'components/questions';

@@ -45,3 +45,13 @@
 		color: $text-light;
 	}
 }
+
+
+@media (min-width: 768px) {
+	.form {
+		&-container {
+			text-align: center;
+			padding: 30px 80px 40px 80px;
+		}
+	}
+}

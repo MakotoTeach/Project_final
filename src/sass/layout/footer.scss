@@ -1,20 +1,80 @@
+.wrapper-footer {
+  height: 480px;
+  padding: 60px 0 36px;
+  background-color: $secondary-bg;
+  background-image: url(../images/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .page-footer {
-  background-image: url(../images/phototeam.png);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  &_info {
+    padding: 0 8px;
+  }
+  &_label {
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-light;
+  }
+  & .site-logo {
+    margin: 0 auto 12px;
+    & img {
+      margin: 0 auto;
+    }
+  }
 }
 
 .make-request {
   display: block;
+  padding: 0 8px;
   font-size: 20px;
   line-height: 60px;
-  color: #00eaff;
-  font-weight: 800;
-  margin-bottom: 300px;
+  color: $text-accented;
 }
 
-.page-footer_label {
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
-  color: #ffffff;
+@media (min-width: 768px) {
+  .wrapper-footer {
+    height: 455px;
+    padding-top: 92px;
+    padding-bottom: 18px;
+  }
+  .page-footer {
+    &_info {
+      @include flex(nowrap, flex-start);
+      align-items: center;
+      & .site-logo {
+        margin: 0 30px 0 0;
+        & img {
+          margin: 0;
+        }
+      }
+    }
+    &_label {
+      font-size: 18px;
+    }
+  }
+  .make-request {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper-footer {
+    height: 1044px;
+    padding-top: 252px;
+    padding-bottom: 54px;
+  }
+  .make-request {
+    font-size: 60px;
+  }
+  .page-footer {
+    &_label {
+      font-size: 25px;
+    }
+  }
 }

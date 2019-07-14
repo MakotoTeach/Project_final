@@ -1,6 +1,5 @@
 .ITway-wrapper {
-  background-color: #181c27;
-  background-image: url(../images/LayerWallpaperHeaderTablet.png);
+  @extend %second-bg;
 }
 
 .ITway {

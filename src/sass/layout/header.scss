@@ -1,11 +1,10 @@
 .wrapper-header {
-  background-color: #181c27;
-  background-image: url(../images/LayerWallpaperHeaderTablet.png);
+  @extend %second-bg;
 }
 
 .page-header {
   margin: 0 auto;
-  padding: 36px 30px 26px 30px;
+  padding: $mob-padding-tb $mob-padding-rl 26px $mob-padding-rl;
 
   &_descr {
     font-size: 14px;
@@ -70,10 +69,6 @@
     }
     &_date {
       font-size: 38px;
-    }
-    &_form {
-      text-align: center;
-      padding: 30px 80px 40px 80px;
     }
   }
 }
