@@ -1,0 +1,156 @@
+.awards-headline {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1b202a;
+  margin-bottom: 25px;
+  letter-spacing: -0.07em;
+}
+
+.awards-label {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 800;
+  color: #222222;
+  background-color: #edf0f2;
+  margin-bottom: 50px;
+}
+
+.awards-list {
+  list-style: none;
+  margin-bottom: 60px;
+}
+
+.awards-item {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
+  padding: 30px;
+  position: relative;
+}
+
+.awards-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  top: 17px;
+  right: 15px;
+  background: #e6e9eb;
+  z-index: -1;
+}
+
+.awards-item:nth-child(-n + 2) {
+  margin-bottom: 60px;
+}
+
+.awards-item img {
+  margin: auto;
+  margin-top: 25px;
+}
+
+.award-name {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.award-descr {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 800;
+}
+
+.awards-item span {
+  font-size: 14px;
+  line-height: 21px;
+  color: #6b6f7a;
+}
+
+.wins-wrapper {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.wins-label {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 800;
+  color: #222222;
+  background-color: #edf0f2;
+  margin-bottom: 50px;
+}
+
+.wins-name {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.wins-name::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(/images/OON.png);
+  background-repeat: no-repeat;
+  left: 43px;
+  right: -40px;
+  top: -63px;
+  bottom: -68px;
+  z-index: -1;
+}
+
+.wins-descr {
+  font-size: 14px;
+  line-height: 21px;
+  color: #6b6f7a;
+}
+
+.partners-label {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 800;
+  color: #222222;
+  background-color: #edf0f2;
+  margin-bottom: 50px;
+}
+
+.partners-list {
+  list-style: none;
+  @include flex(wrap, space-between);
+  align-items: center;
+  align-content: space-around;
+}
+
+.partners-item {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .ITway-label {
+    font-size: 22px;
+    letter-spacing: -0.07em;
+  }
+
+  .ITwork-container {
+    width: 384px;
+  }
+
+  .ITway-headline {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .ITway-button {
+    width: 532px;
+    margin-left: 0;
+  }
+}
