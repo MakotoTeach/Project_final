@@ -26,29 +26,15 @@ a {
 }
 
 .container {
-  padding-right: $mob-padding-rl;
-  padding-left: $mob-padding-rl;
-  // padding: 36px 30px 36px 30px;
+  padding: $mob-padding-tb $mob-padding-rl;
 }
-
-// .section {
-//   margin: 0 auto;
-//   padding: 36px 30px 36px 30px;
-// }
-
 
 @media (min-width: 768px) {
   .container {
     width: 660px;
-    padding-top: $tabl-padding-rl;
-    padding-left: $tabl-padding-rl;
+    padding: 0 $tabl-padding-rl;
     margin: 0 auto;
   }
-
-  //   .section {
-  //     margin: 0 auto;
-  //     padding: 36px 10px 36px 10px;
-  //   }
 }
 
 @media (min-width: 1200px) {

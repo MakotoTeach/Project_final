@@ -1,68 +1,70 @@
-.interest-headline {
-  font-size: 20px;
-  font-weight: 800;
-  color: #1b202a;
-  margin-bottom: 25px;
-  letter-spacing: -0.07em;
+.wrapper-interest {
+  padding: $mob-padding-tb $mob-padding-rl;
+  background-color: $main-bg;
 }
 
-.interest-label {
-  font-size: 14px;
-  font-weight: 700;
-  margin-bottom: 22px;
-  color: #1b202a;
-  letter-spacing: -0.03em;
+.interest {
+  &-headline {
+    @extend %title;
+  }
 }
 
-.stat-list {
-  list-style: none;
-  margin-bottom: 24px;
-  padding-left: 18px;
-  padding-right: 18px;
-}
-
-.stat-list_item:nth-child(-n + 5) {
-  margin-bottom: 20px;
-}
-
-.stat-list_item:nth-child(6) {
-  position: relative;
-}
-
-.stat-list_item:nth-child(6)::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  background-image: url(../images/map.png);
-  background-size: cover;
-  left: -7px;
-  right: -40px;
-  top: -47px;
-  bottom: -68px;
-  z-index: -1;
-}
-
-.stat-number {
-  font-size: 30px;
-  font-weight: 700;
-  color: #00eaff;
-}
-
-.stat-number_descr {
-  font-size: 14px;
-  font-weight: 400;
-  color: #1b202a;
-}
-
-.stat-incoming_container {
-  padding-left: 18px;
-  padding-right: 18px;
-}
-
-.stat-incoming {
-  font-size: 14px;
-  font-weight: 700;
-  color: #1b202a;
+// Statistics
+.stat {
+  &-label {
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 700;
+    color: $text-title;
+    letter-spacing: -0.03em;
+  }
+  &-list {
+    list-style: none;
+    margin-bottom: 24px;
+    padding-left: 18px;
+    padding-right: 18px;
+    &_item {
+      &:nth-child(-n + 5) {
+        margin-bottom: 20px;
+      }
+      
+      &:nth-child(6) {
+        position: relative;
+      }
+      
+      &:nth-child(6)::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        background-image: url(../images/map.png);
+        background-size: cover;
+        left: -7px;
+        right: -40px;
+        top: -47px;
+        bottom: -68px;
+        z-index: -1;
+      }
+    }
+  }
+  &-number {
+    font-size: 30px;
+    font-weight: 700;
+    color: #00eaff;
+    &_descr {
+      font-size: 14px;
+      font-weight: 400;
+      color: #1b202a;
+    }
+  }
+  &-incoming {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1b202a;
+    &_container {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
 }
 
 .incoming-list {
@@ -89,6 +91,8 @@
   font-weight: 400;
 }
 
+
+// Offer
 .offer-headline {
   font-size: 20px;
   font-weight: 800;
@@ -129,7 +133,6 @@
 @media (min-width: 768px) {
   .interest-headline {
     text-align: center;
-    font-size: 30px;
     margin: auto;
     margin-bottom: 85px;
   }
