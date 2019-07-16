@@ -53,22 +53,72 @@
 }
 
 @media (min-width: 768px) {
-  .page-header{
+  // .wrapper-header {
+  //   @extend %desck-bg;
+  // }
+
+  .page-header {
     &_info {
       width: 576px;
     }
+
     &_headline {
       font-size: 40px;
       line-height: 50px;
     }
+
     &_descr2 {
       font-size: 18px;
     }
+
     &_meeting {
       font-size: 18px;
     }
+
     &_date {
       font-size: 38px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header {
+    height: 948px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &_descr {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+
+    &_headline {
+      font-size: 60px;
+      line-height: 70px;
+      margin-bottom: 35px;
+    }
+
+    &_descr2 {
+      font-size: 35px;
+      line-height: 47px;
+      margin-bottom: 35px;
+    }
+    &_meeting {
+      font-size: 29.21px;
+      line-height: 75px;
+    }
+    &_date {
+      font-size: 55px;
+      line-height: 75px;
+      letter-spacing: -0.07em;
+    }
+    &_info {
+      width: 654px;
+    }
+    &_privacy {
+      font-size: 16.67px;
+      line-height: 37.5px;
     }
   }
 }

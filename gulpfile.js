@@ -67,7 +67,7 @@ function images() {
     .pipe(
       imagemin([
         imagemin.jpegtran({ progressive: true }),
-        imagemin.optipng({ optimizationLevel: 3 }),
+        // imagemin.optipng({ optimizationLevel: 3 }),
         imagemin.svgo({
           plugins: [{ removeViewBox: false }, { cleanupIDs: false }],
         }),

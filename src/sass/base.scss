@@ -32,14 +32,15 @@ a {
 @media (min-width: 768px) {
   .container {
     width: 660px;
-    padding: 0 $tabl-padding-rl;
+    padding: 30px $tabl-padding-rl;
     margin: 0 auto;
   }
+
 }
 
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
-    padding: 0 15px;
+    padding: 36px 15px;
   }
 }

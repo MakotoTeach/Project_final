@@ -136,9 +136,11 @@
     margin: auto;
     margin-bottom: 85px;
   }
+
   .stat-list {
     @include flex(wrap, space-between);
   }
+  
   .stat-list_item {
     width: 172px;
   }

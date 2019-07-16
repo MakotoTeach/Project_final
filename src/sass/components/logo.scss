@@ -2,3 +2,9 @@
   display: block;
   margin-bottom: 26px;
 }
+
+@media (min-width: 1200px) {
+  .site-logo {
+    margin-bottom: 70px;
+  }
+}
