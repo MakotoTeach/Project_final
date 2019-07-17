@@ -204,6 +204,7 @@
     }
     &-item {
       flex: 0 0 30.7%;
+      margin: 0;
       &:nth-child(-n+2) {
         margin-bottom: 0;
       }
@@ -244,9 +245,74 @@
 }
 
 @media (min-width: 1200px) {
+  .about {
+    @include flex(wrap);
+    width: 100%;
+    &_headline {
+      flex: 0 0 100%;
+      padding-right: calc(100% - 585px);
+      margin: 0 0 60px;
+      line-height: 60px;
+    }
+  }
   .wrapper-about {
     width: 1170px;
     margin: 0 auto;
     padding: 100px $desk-padding-rl 126px;
+  }
+  .awards {
+    &-wrapper {
+      flex: 0 0 100%;
+      order: 1;
+      margin-top: 60px;
+    }
+    &-label {
+      margin-left: 0;
+    }
+    &-item {
+      &::before, &::after {
+        display: none;
+      }
+      &:nth-of-type(1) {
+        flex-basis: 31%;
+      }
+      &:nth-of-type(2) {
+        flex-basis: 26%;
+      }
+      &:nth-of-type(3) {
+        flex-basis: 34%;
+      }
+    }
+    &-list {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .award {
+    @include flex();
+    align-items: flex-start;
+    box-shadow: none;
+    &::before {
+      display: none;
+    }
+    &-content {
+      flex: 0 0 65%;
+    }
+    &-name {
+      margin-bottom: 18px;
+    }
+    & img {
+      margin: 0;
+    }
+  }
+  .wins-wrapper {
+    flex: 0 0 32.05%;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .partners-wrapper {
+    flex: 0 0 55.73%;
+    padding: 0;
   }
 }
