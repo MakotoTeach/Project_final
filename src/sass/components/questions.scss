@@ -19,7 +19,7 @@
       margin-bottom: 20px;
     }
     &::before {
-      content: "";
+      content: '';
       display: inline-block;
       width: 20px;
       height: 12px;
@@ -33,13 +33,31 @@
       font-weight: 800;
     }
   }
-
 }
 
 @media (min-width: 768px) {
-  .basic-qustions {
+  .basic-questions {
     &_item {
       font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper-questions{
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  
+  .basic-questions {
+    @include flex(wrap, space-between);
+
+    &_headline {
+      width: 503px;
+    }
+
+    &_list {
+      width: 503px;
     }
   }
 }

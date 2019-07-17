@@ -27,13 +27,13 @@
       &:nth-child(-n + 5) {
         margin-bottom: 20px;
       }
-      
+
       &:nth-child(6) {
         position: relative;
       }
-      
+
       &:nth-child(6)::before {
-        content: " ";
+        content: ' ';
         display: block;
         position: absolute;
         background-image: url(../images/map.png);
@@ -91,7 +91,6 @@
   font-weight: 400;
 }
 
-
 // Offer
 .offer-headline {
   font-size: 20px;
@@ -120,7 +119,7 @@
 }
 
 .offer-list_item::before {
-  content: "";
+  content: '';
   position: absolute;
   display: inline-block;
   width: 12px;
@@ -134,16 +133,51 @@
   .interest-headline {
     text-align: center;
     margin: auto;
-    margin-bottom: 85px;
+    margin-bottom: 30px;
+  }
+
+  .stat {
+    position: relative;
+    width: 700px;
+    margin: auto;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
+  
+  }
+
+  .stat::before{
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 18px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #e6e9eb;
+    z-index: -1;
+  }
+
+  .stat {
+    &-label {
+      font-size: 18px;
+      line-height: 25px;
+      font-weight: 800;
+      width: 404px;
+      margin: auto;
+      margin-bottom: 35px;
+      text-align: center;
+    }
   }
 
   .stat-list {
     @include flex(wrap, space-between);
   }
-  
+
   .stat-list_item {
     width: 172px;
   }
+
   .stat-list_item:nth-child(6)::before {
     background-image: url(../images/mapfortablet.png);
     background-size: auto;
@@ -157,12 +191,15 @@
   .stat-number {
     font-weight: 600;
   }
+
   .stat-incoming_container {
     width: 256px;
   }
+
   .incoming-number {
     font-weight: 600;
   }
+
   .interest-label {
     width: 404px;
     text-align: center;
@@ -172,6 +209,12 @@
     font-weight: 800;
   }
 
+  .offer {
+    width: 574px;
+    margin: auto;
+    padding-top: 50px;
+  }
+
   .offer-headline {
     font-size: 30px;
   }
@@ -179,6 +222,7 @@
   .offer-list {
     width: 440px;
   }
+
   .offer-list_item {
     font-size: 16px;
   }

@@ -3,10 +3,6 @@
   background-image: url(../images/LayerWallpaperHeaderTablet.png);
 }
 
-// %desck-bg{
-//   background-color: $secondary-bg;
-//   background-image: url(../images/HeadWallP1200.png);
-// }
 
 %title {
   margin-bottom: 25px;
@@ -19,5 +15,17 @@
 @media (min-width: 768px) {
   %title {
     font-size: 30px;
+  }
+
+  %second-bg{
+    background-color: $secondary-bg;
+    background-image: url(../images/HeadWallP1200.png);
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  %title {
+    font-size: 48px;
   }
 }
