@@ -40,15 +40,19 @@
     &_item {
       font-size: 16px;
     }
+
+    &_headline{
+      font-weight: 700;
+    }
   }
 }
 
 @media (min-width: 1200px) {
-  .wrapper-questions{
+  .wrapper-questions {
     padding-top: 100px;
     padding-bottom: 60px;
   }
-  
+
   .basic-questions {
     @include flex(wrap, space-between);
 
