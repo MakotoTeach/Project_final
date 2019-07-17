@@ -6,161 +6,247 @@
 .about {
   &_headline {
     @extend %title;
+    line-height: 30px;
+  }
+}
+
+// Awards block
+.awards {
+  &-label {
+    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 21px;
+    color: $text;
+    background-color: $light-bg;
+  }
+  &-list {
+    margin-bottom: 60px;
+    list-style: none;
+    counter-reset: list-awards 0;
+  }
+  &-item {
+    position: relative;
+    margin: 0 auto;
+    counter-increment: list-awards +1;
+    &:nth-child(-n + 2) {
+      margin-bottom: 60px;
+    }
+    &::before {
+      content: '0' counter(list-awards);
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 70px;
+      font-weight: 700;
+      color: $light-bg;
+      transform: translateY(-60%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: -18px;
+      top: 18px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #e6e9eb;
+    }
+  }
+}
+.award {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  background-color: $main-bg;
+  box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: -12px;
+    z-index: 3;
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: $text-accented;
+  }
+  & img {
+    margin: auto;
+    margin-top: 25px;
+  }
+  & span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #6b6f7a;
+  }
+  &-name {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 26px;
+  }
+  &-descr {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 21px;
+  }
+}
+
+// Wins block
+.wins {
+  &-wrapper {
+    position: relative;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 50px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      display: block;
+      width: 144px;
+      height: 122px;
+      background-image: url(../images/OON.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: translateX(-50%);
+    }
+  }
+  &-label {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 21px;
+    color: $text;
+    background-color: $light-bg;
+  }
+  &-name {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 30px;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: url(/images/OON.png);
+      background-repeat: no-repeat;
+      left: 43px;
+      right: -40px;
+      top: -63px;
+      bottom: -68px;
+      z-index: -1;
+    }
+  }
+  &-descr {
+    font-size: 14px;
+    line-height: 21px;
+    color: #6b6f7a;
+  }
+}
+
+// Partners block
+.partners {
+  &-label {
+    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    color: $text;
+    background-color: $light-bg;
+  }
+  &-list {
+    @include flex(wrap, space-between);
+    align-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  
+  &-item {
+    display: inline-block;
+    margin-bottom: 15px;
   }
 }
 
 
-.awards-label {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 800;
-  color: #222222;
-  background-color: #edf0f2;
-  margin-bottom: 50px;
-}
-
-.awards-list {
-  list-style: none;
-  margin-bottom: 60px;
-}
-
-.awards-item {
-  width: 100%;
-  margin: 0 auto;
-  box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
-  background-color: #ffffff;
-  padding: 30px;
-  position: relative;
-}
-
-.awards-item::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: -20px;
-  bottom: -20px;
-  top: 17px;
-  right: 15px;
-  background: #e6e9eb;
-  z-index: -1;
-}
-
-.awards-item:nth-child(-n + 2) {
-  margin-bottom: 60px;
-}
-
-.awards-item img {
-  margin: auto;
-  margin-top: 25px;
-}
-
-.award-name {
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.award-descr {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 800;
-}
-
-.awards-item span {
-  font-size: 14px;
-  line-height: 21px;
-  color: #6b6f7a;
-}
-
-.wins-wrapper {
-  padding-left: 18px;
-  padding-right: 18px;
-  margin-bottom: 50px;
-}
-
-.wins-label {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 800;
-  color: #222222;
-  background-color: #edf0f2;
-  margin-bottom: 50px;
-}
-
-.wins-name {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 800;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.wins-name::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url(/images/OON.png);
-  background-repeat: no-repeat;
-  left: 43px;
-  right: -40px;
-  top: -63px;
-  bottom: -68px;
-  z-index: -1;
-}
-
-.wins-descr {
-  font-size: 14px;
-  line-height: 21px;
-  color: #6b6f7a;
-}
-
-.partners-label {
-  display: inline-block;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 800;
-  color: #222222;
-  background-color: #edf0f2;
-  margin-bottom: 50px;
-}
-
-.partners-list {
-  list-style: none;
-  @include flex(wrap, space-between);
-  align-items: center;
-  align-content: space-around;
-}
-
-.partners-item {
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
 @media (min-width: 768px) {
   .wrapper-about {
-    padding: 50px 0;
+    padding: 48px 14px 40px;
   }
   .about {
     width: 748px;
     margin: 0 auto;
-    &-headline {
-      width: 492px;
+    &_headline {
+      width: 512px;
       line-height: 40px;
-      margin-left: 40px;
+      margin-left: 64px;
     }
   }
+  .awards {
+    &-label{
+      margin-left: 64px;
+    }
+    &-list {
+      @include flex();
+      padding: 0 18px;
+    }
+    &-item {
+      flex: 0 0 30.7%;
+      &:nth-child(-n+2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .award {
+    height: 100%;
+  }
+  .wins {
+    &-wrapper {
+      width: 384px;
+      margin: 0 auto;
+      &::before {
+        left: unset;
+        right: 0;
+        transform: none;
+      }
+    }
+    &-label {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  .partners {
+    &-wrapper {
+      padding: 0 30px 0 64px;
+    }
+    &-list {
+      justify-content: flex-start;
+      margin-right: -30px;
+      margin-bottom: -26px;
+    }
+    &-item {
+      margin-right: 30px;
+      margin-bottom: 26px;
+    }
+  }
+}
 
-  .awards-label{
-    margin-left: 40px;
-  }
-  .awards-list {
-    @include flex;
-  }
-  .awards-item {
-    width: 225px;
-    height: 465px;
+@media (min-width: 1200px) {
+  .wrapper-about {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 100px $desk-padding-rl 126px;
   }
 }
