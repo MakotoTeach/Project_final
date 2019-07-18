@@ -1,5 +1,5 @@
 .wrapper-interest {
-  padding: $mob-padding-tb $mob-padding-rl;
+  // padding: $mob-padding-tb $mob-padding-rl;
   background-color: $main-bg;
 }
 
@@ -11,6 +11,19 @@
 
 // Statistics
 .stat {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 62px;
+    left: 18px;
+    display: block;
+    width: 312px;
+    height: 193px;
+    background-image: url(../images/map.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   &-label {
     margin-bottom: 22px;
     font-size: 14px;
@@ -34,18 +47,18 @@
         position: relative;
       }
 
-      &:nth-child(6)::before {
-        content: ' ';
-        display: block;
-        position: absolute;
-        background-image: url(../images/map.png);
-        background-size: cover;
-        left: -7px;
-        right: -40px;
-        top: -47px;
-        bottom: -68px;
-        z-index: -1;
-      }
+      // &:nth-child(6)::before {
+      //   content: ' ';
+      //   display: block;
+      //   position: absolute;
+      //   background-image: url(../images/map.png);
+      //   background-size: cover;
+      //   left: -7px;
+      //   right: -40px;
+      //   top: -47px;
+      //   bottom: -68px;
+      //   z-index: -1;
+      // }
     }
   }
   &-number {
@@ -55,6 +68,7 @@
     &_descr {
       font-size: 14px;
       font-weight: 400;
+      line-height: 25px;
       color: #1b202a;
     }
   }
@@ -63,6 +77,7 @@
     font-weight: 700;
     color: #1b202a;
     &_container {
+      position: relative;
       padding-left: 18px;
       padding-right: 18px;
     }
@@ -72,64 +87,62 @@
 .incoming-list {
   @include flex;
   margin-bottom: 30px;
-}
-
-.incoming-list_item {
-  /* width: 111px; */
-  width: 45%;
-  display: inline-block;
+  &_item {
+    /* width: 111px; */
+    width: 45%;
+    display: inline-block;
+  }
 }
 
 .incoming-number {
   font-size: 25px;
   font-weight: 700;
-  color: #00eaff;
+  color: $text-accented;
   letter-spacing: -0.07em;
-}
-
-.incoming-number_descr {
-  font-size: 10px;
-  line-height: 11px;
-  font-weight: 400;
+  &_descr {
+    font-size: 10px;
+    line-height: 11px;
+    font-weight: 400;
+  }
 }
 
 // Offer
-.offer-headline {
-  font-size: 20px;
-  font-weight: 800;
-  color: #1b202a;
-  margin-bottom: 25px;
-  letter-spacing: -0.07em;
+.offer {
+  &-headline {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1b202a;
+    margin-bottom: 25px;
+    letter-spacing: -0.07em;
+  }
+  &-list {
+    list-style: none;
+    margin-bottom: 36px;
+    padding-left: 18px;
+    padding-right: 18px;
+    &_item {
+      position: relative;
+      padding-left: 20px;
+      font-size: 14px;
+      color: #1b202a;
+      &:nth-child(-n + 4) {
+        margin-bottom: 18px;
+      }
+      
+      &::before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: #00eaff;
+        left: -17px;
+        top: 4px;
+      }
+    }
+  }
 }
 
-.offer-list {
-  list-style: none;
-  margin-bottom: 36px;
-  padding-left: 18px;
-  padding-right: 18px;
-}
-
-.offer-list_item {
-  position: relative;
-  padding-left: 20px;
-  font-size: 14px;
-  color: #1b202a;
-}
-
-.offer-list_item:nth-child(-n + 4) {
-  margin-bottom: 18px;
-}
-
-.offer-list_item::before {
-  content: '';
-  position: absolute;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: #00eaff;
-  left: -17px;
-  top: 4px;
-}
 
 @media (min-width: 768px) {
   .interest {
@@ -143,26 +156,34 @@
 
   .stat {
     position: relative;
-    width: 700px;
     margin: auto;
-    padding: 50px;
+    // padding: 50px
+    padding: 50px 54px 56px 56px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
-  }
-
-  .stat::before {
-    content: '';
-    position: absolute;
-    left: -18px;
-    top: 18px;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #e6e9eb;
-    z-index: -1;
-  }
-
-  .stat {
+    &::before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 18px;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #e6e9eb;
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 30px;
+      bottom: 56px;
+      display: block;
+      width: 312px;
+      height: 193px;
+      background-image: url(../images/map2.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
     &-label {
       font-size: 18px;
       line-height: 25px;
@@ -172,34 +193,43 @@
       margin-bottom: 35px;
       text-align: center;
     }
+    &-list {
+      position: relative;
+      z-index: 2;
+      @include flex(wrap, space-between);
+      &_item {
+        // width: 172px;
+        flex: 0 0 28%;
+        &:nth-of-type(3n+3) {
+          flex-basis: 26%;
+        }
+        &:nth-child(-n + 5) {
+          margin-bottom: 0;
+        }
+        &:nth-child(-n + 3) {
+          margin-bottom: 20px;
+        }
+        // &:nth-child(6)::before {
+        //   background-image: url(../images/mapfortablet.png);
+        //   background-size: auto;
+        //   background-repeat: no-repeat;
+        //   left: -163px;
+        //   right: -10px;
+        //   top: 58px;
+        //   bottom: -170px;
+        // }
+      }
+    }
+    &-number {
+      font-weight: 600;
+      &_descr {
+        line-height: 20px;
+      }
+    }
+    &-incoming_container {
+      width: 238px;
+    }
   }
-
-  .stat-list {
-    @include flex(wrap, space-between);
-  }
-
-  .stat-list_item {
-    width: 172px;
-  }
-
-  .stat-list_item:nth-child(6)::before {
-    background-image: url(../images/mapfortablet.png);
-    background-size: auto;
-    background-repeat: no-repeat;
-    left: -163px;
-    right: -10px;
-    top: 58px;
-    bottom: -170px;
-  }
-
-  .stat-number {
-    font-weight: 600;
-  }
-
-  .stat-incoming_container {
-    width: 256px;
-  }
-
   .incoming-number {
     font-weight: 600;
   }
@@ -225,6 +255,7 @@
 
   .offer-list {
     width: 440px;
+    margin-bottom: 0;
   }
 
   .offer-list_item {
@@ -236,20 +267,27 @@
   .interest {
     &-headline {
       width: 458px;
-      margin: 0;
+      margin: 0 0 76px;
     }
 
     &-content {
       @include flex(nowrap, space-between);
+      align-items: flex-end;
     }
   }
 
   .stat {
     padding: 30px;
     width: 650px;
+    margin: 0;
   }
 
   .offer {
     width: 445px;
+    margin: 0;
+  }
+
+  .incoming-list {
+    margin: 0;
   }
 }
