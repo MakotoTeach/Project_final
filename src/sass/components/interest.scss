@@ -12,6 +12,7 @@
 // Statistics
 .stat {
   position: relative;
+
   &::before {
     content: '';
     position: absolute;
@@ -24,6 +25,7 @@
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   &-label {
     margin-bottom: 22px;
     font-size: 14px;
@@ -41,6 +43,10 @@
     &_item {
       &:nth-child(-n + 5) {
         margin-bottom: 20px;
+      }
+      
+      &:nth-child(5) {
+        position: relative;
       }
 
       &:nth-child(6) {
@@ -128,7 +134,7 @@
       &:nth-child(-n + 4) {
         margin-bottom: 18px;
       }
-      
+
       &::before {
         content: '';
         position: absolute;
@@ -143,7 +149,6 @@
   }
 }
 
-
 @media (min-width: 768px) {
   .interest {
     &-headline {
@@ -155,7 +160,7 @@
   }
 
   .stat {
-    position: relative;
+    // position: relative;
     margin: auto;
     // padding: 50px
     padding: 50px 54px 56px 56px;
@@ -200,7 +205,7 @@
       &_item {
         // width: 172px;
         flex: 0 0 28%;
-        &:nth-of-type(3n+3) {
+        &:nth-of-type(3n + 3) {
           flex-basis: 26%;
         }
         &:nth-child(-n + 5) {

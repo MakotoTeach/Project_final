@@ -21,18 +21,22 @@
     color: $text;
     background-color: $light-bg;
   }
+
   &-list {
     margin-bottom: 60px;
     list-style: none;
     counter-reset: list-awards 0;
   }
+
   &-item {
     position: relative;
     margin: 0 auto;
     counter-increment: list-awards +1;
+
     &:nth-child(-n + 2) {
       margin-bottom: 60px;
     }
+
     &::before {
       content: '0' counter(list-awards);
       position: absolute;
@@ -45,6 +49,7 @@
       color: $light-bg;
       transform: translateY(-60%);
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -57,12 +62,14 @@
     }
   }
 }
+
 .award {
   position: relative;
   z-index: 2;
   padding: 30px;
   background-color: $main-bg;
   box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
+
   &::before {
     content: '';
     position: absolute;
@@ -74,16 +81,19 @@
     height: 2px;
     background-color: $text-accented;
   }
+
   & img {
     margin: auto;
     margin-top: 25px;
   }
+
   & span {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
     color: #6b6f7a;
   }
+
   &-name {
     margin-bottom: 20px;
     font-size: 18px;
@@ -105,6 +115,7 @@
     padding-left: 18px;
     padding-right: 18px;
     margin-bottom: 50px;
+    
     &::before {
       content: '';
       position: absolute;
@@ -119,6 +130,7 @@
       transform: translateX(-50%);
     }
   }
+
   &-label {
     position: relative;
     display: inline-block;
