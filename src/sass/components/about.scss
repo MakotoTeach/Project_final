@@ -51,7 +51,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: -18px;
       top: 18px;
@@ -115,7 +115,7 @@
     padding-left: 18px;
     padding-right: 18px;
     margin-bottom: 50px;
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -149,7 +149,7 @@
     text-transform: uppercase;
     line-height: 30px;
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       background-image: url(/images/OON.png);
@@ -185,13 +185,12 @@
     align-items: center;
     list-style: none;
   }
-  
+
   &-item {
     display: inline-block;
     margin-bottom: 15px;
   }
 }
-
 
 @media (min-width: 768px) {
   .wrapper-about {
@@ -206,25 +205,35 @@
       margin-left: 64px;
     }
   }
+
   .awards {
-    &-label{
+    &-label {
       margin-left: 64px;
     }
+
     &-list {
       @include flex();
       padding: 0 18px;
     }
+
     &-item {
       flex: 0 0 30.7%;
       margin: 0;
-      &:nth-child(-n+2) {
+
+      &:nth-child(-n + 2) {
         margin-bottom: 0;
+      }
+
+      &:nth-child(-n +1) .award img{
+        margin-top: 80px;
       }
     }
   }
+
   .award {
     height: 100%;
   }
+
   .wins {
     &-wrapper {
       width: 384px;
@@ -240,15 +249,18 @@
       line-height: 30px;
     }
   }
+
   .partners {
     &-wrapper {
       padding: 0 30px 0 64px;
     }
+
     &-list {
       justify-content: flex-start;
       margin-right: -30px;
       margin-bottom: -26px;
     }
+
     &-item {
       margin-right: 30px;
       margin-bottom: 26px;
@@ -258,8 +270,9 @@
 
 @media (min-width: 1200px) {
   .about {
-    @include flex(wrap);
+    @include flex(wrap,);
     width: 100%;
+
     &_headline {
       flex: 0 0 100%;
       padding-right: calc(100% - 585px);
@@ -267,62 +280,83 @@
       line-height: 60px;
     }
   }
+
   .wrapper-about {
     width: 1170px;
     margin: 0 auto;
     padding: 100px $desk-padding-rl 126px;
   }
+
   .awards {
     &-wrapper {
       flex: 0 0 100%;
       order: 1;
       margin-top: 60px;
     }
+
     &-label {
       margin-left: 0;
     }
+
     &-item {
-      &::before, &::after {
+      &::before,
+      &::after {
         display: none;
       }
+
       &:nth-of-type(1) {
         flex-basis: 31%;
       }
+
       &:nth-of-type(2) {
         flex-basis: 26%;
       }
+
       &:nth-of-type(3) {
         flex-basis: 34%;
       }
+
+      &:nth-child(-n +1) .award img{
+        margin-top: 25px;
+      }
     }
+
     &-list {
+      justify-content: space-around;
       padding: 0;
       margin: 0;
     }
   }
+
   .award {
     @include flex();
     align-items: flex-start;
     box-shadow: none;
+    
     &::before {
       display: none;
     }
+
     &-content {
       flex: 0 0 65%;
     }
+
     &-name {
       margin-bottom: 18px;
     }
+
     & img {
       margin: 0;
     }
   }
+
   .wins-wrapper {
     flex: 0 0 32.05%;
     width: auto;
     padding: 0;
     margin: 0;
   }
+
   .partners-wrapper {
     flex: 0 0 55.73%;
     padding: 0;
