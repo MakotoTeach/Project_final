@@ -1,5 +1,4 @@
 .wrapper-interest {
-  // padding: $mob-padding-tb $mob-padding-rl;
   background-color: $main-bg;
 }
 
@@ -52,19 +51,6 @@
       &:nth-child(6) {
         position: relative;
       }
-
-      // &:nth-child(6)::before {
-      //   content: ' ';
-      //   display: block;
-      //   position: absolute;
-      //   background-image: url(../images/map.png);
-      //   background-size: cover;
-      //   left: -7px;
-      //   right: -40px;
-      //   top: -47px;
-      //   bottom: -68px;
-      //   z-index: -1;
-      // }
     }
   }
   &-number {
@@ -94,7 +80,6 @@
   @include flex;
   margin-bottom: 30px;
   &_item {
-    /* width: 111px; */
     width: 45%;
     display: inline-block;
   }
@@ -160,9 +145,7 @@
   }
 
   .stat {
-    // position: relative;
     margin: auto;
-    // padding: 50px
     padding: 50px 54px 56px 56px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16);
@@ -203,7 +186,6 @@
       z-index: 2;
       @include flex(wrap, space-between);
       &_item {
-        // width: 172px;
         flex: 0 0 28%;
         &:nth-of-type(3n + 3) {
           flex-basis: 26%;
@@ -214,15 +196,6 @@
         &:nth-child(-n + 3) {
           margin-bottom: 20px;
         }
-        // &:nth-child(6)::before {
-        //   background-image: url(../images/mapfortablet.png);
-        //   background-size: auto;
-        //   background-repeat: no-repeat;
-        //   left: -163px;
-        //   right: -10px;
-        //   top: 58px;
-        //   bottom: -170px;
-        // }
       }
     }
     &-number {
@@ -252,19 +225,17 @@
     width: 574px;
     margin: auto;
     padding-top: 50px;
-  }
-
-  .offer-headline {
-    font-size: 30px;
-  }
-
-  .offer-list {
-    width: 440px;
-    margin-bottom: 0;
-  }
-
-  .offer-list_item {
-    font-size: 16px;
+    &-headline {
+      font-size: 30px;
+    }
+  
+    &-list {
+      width: 440px;
+      margin-bottom: 0;
+      &_item {
+        font-size: 16px;
+      }
+    }
   }
 }
 
